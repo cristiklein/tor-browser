@@ -2,21 +2,14 @@
 
 This repo defines the `cklein/tor-browser` Docker image.
 
-You can run tor-browser in a container with a command like:
+## Pre-requisites
 
-```
-docker run -it --rm --name tor-browser \
-           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-           -e DISPLAY=unix$DISPLAY \
-           cklein/tor-browser
-```
+* [Docker](https://docker.com)
 
-If you want to specify a custom `torrc` file, that can be done with:
-```
-docker run -it --rm --name tor-browser \
-           -v /host/dir/containing/torrc:/conf:ro \
-           -e TORRC_PATH=/conf/torrc \
-           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-           -e DISPLAY=unix$DISPLAY \
-           cklein/tor-browser
-```
+## Build
+
+`./build-me.sh`
+
+## Run
+
+`./run-me.sh`
