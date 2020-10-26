@@ -31,7 +31,7 @@ WORKDIR /usr/local/bin
 # can figure out why it's flaky and commonly gives "keys: key
 # 4E2C6E8793298290 can't be retrieved, gpg: no valid OpenPGP data
 # found."
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys ${RELEASE_KEY}
+RUN gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
 
 RUN curl --fail -O -sSL ${RELEASE_URL} && \
     curl --fail -O -sSL ${RELEASE_URL}.asc && \
