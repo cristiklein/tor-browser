@@ -1,4 +1,4 @@
-FROM debian
+FROM ubuntu:18.04
 
 ENV TOR_VERSION=9.0a1
 # Via https://dist.torproject.org/torbrowser/$TOR_VERSION/sha256sums-signed-build.txt
